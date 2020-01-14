@@ -15,3 +15,5 @@ The way to find `m` is:
 And the way to find c is:
 
 ![SLR y-intercept](/Images/slr-y-intercept.png)
+
+#### [Implimentation](/simple-linear-regression.py)
