@@ -8,6 +8,10 @@ In linear regression we have some x values and some y values, and the problem is
 
 In simple word we have to find `y = mx + c` line. From an array of `Xs` and an array of `ys`. To find the line we have to find the slope `m` and the y-intercept `c`.
 
-The method to find `m` is:
+The way to find `m` is:
+
 ![SLR Slope](/Images/slr-slope.png)
 
+And the way to find c is:
+
+![SLR y-intercept](/Images/slr-y-intercept.png)
