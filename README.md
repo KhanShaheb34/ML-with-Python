@@ -16,4 +16,13 @@ And the way to find c is:
 
 ![SLR y-intercept](/Images/slr-y-intercept.png)
 
+### Accuracy of the best fit line
+The error of a line from a point is the square of the perpendicular distance between them. It is squared because the distance can be negative too.
+
+The squared error (SE) of a line is the sum of all errors from every point of a graph to a line.
+
+The squared error of the best fit line is expressed by: ![SE(best-fit-line)](/Images/se-bfl.png)
+
+And the squared error of the mean line is expressed by: ![SE(mean-line)](/Images/se-meanline.png)
+
 #### [Implimentation](/simple-linear-regression.py)
