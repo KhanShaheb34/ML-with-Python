@@ -23,6 +23,21 @@ x_predict = 8
 y_predict = m*x_predict + b
 print(y_predict)
 
+# calculating the accuracy
+# for calculating the sum of squared error
+def squared_error(ys_orig, ys_line):
+    return sum((ys_line-ys_orig)**2)
+
+# for calculating the r squared theory
+def coefficient_of_determination(ys_orig, ys_line):
+    y_mean_line = [mean(ys_orig) for y in ys_orig]
+    se_regression_line = squared_error(ys_orig, ys_line)
+    se_mean_line = squared_error(ys_orig, y_mean_line)
+    return (1 - (se_regression_line / se_mean_line))
+
+r_squared = coefficient_of_determination(ys, regression_line)
+print(r_squared)
+
 # plotting the points and regression line
 plt.scatter(xs, ys, marker='o')
 plt.plot(xs, regression_line)
