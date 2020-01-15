@@ -1,10 +1,28 @@
 from statistics import mean
 import numpy as np 
 import matplotlib.pyplot as plt 
+import random
 
-# loading data 
+# dummy data
 xs = np.array([1,2,3,4,5,6])
 ys = np.array([11,19,33,39,52,61])
+
+# crate random dataset
+def create_dataset(amount, variance, step=2, correlation=False):
+    val = 1
+    ys = []
+    for i in range(amount):
+        y = val + random.randrange(-variance, variance)
+        ys.append(y)
+        if correlation and correlation == 'pos':
+            val += step
+        if correlation and correlation == 'neg':
+            val -= step
+    xs = [i for i in range(len(ys))]
+
+    return np.array(xs), np.array(ys)
+
+xs, ys = create_dataset(50, 30, correlation='pos')
 
 # calculating m and b as per the algorithm
 def best_fit_slope_y_intercept(xs, ys):
@@ -39,7 +57,7 @@ r_squared = coefficient_of_determination(ys, regression_line)
 print(r_squared)
 
 # plotting the points and regression line
-plt.scatter(xs, ys, marker='o')
+plt.scatter(xs, ys, marker='.')
 plt.plot(xs, regression_line)
-plt.scatter(x_predict,y_predict, color='red', marker='X')
+plt.scatter(x_predict,y_predict, color='red', marker='x')
 plt.show()
