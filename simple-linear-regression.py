@@ -18,7 +18,13 @@ m, b = best_fit_slope_y_intercept(xs, ys)
 # getting the regression line by using all of the x to 'y = mx + c'
 regression_line = [(m*x)+b for x in xs]
 
+# predicting a value
+x_predict = 8
+y_predict = m*x_predict + b
+print(y_predict)
+
 # plotting the points and regression line
-plt.scatter(xs, ys)
+plt.scatter(xs, ys, marker='o')
 plt.plot(xs, regression_line)
+plt.scatter(x_predict,y_predict, color='red', marker='X')
 plt.show()
