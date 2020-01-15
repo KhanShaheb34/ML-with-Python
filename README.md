@@ -25,4 +25,8 @@ The squared error of the best fit line is expressed by: ![SE(best-fit-line)](/Im
 
 And the squared error of the mean line is expressed by: ![SE(mean-line)](/Images/se-meanline.png)
 
+According to **R Squared Theory** the accuracy of a best fite line is:
+
+![R-squared Theory](/Images/r-squared.png)
+
 #### [Implimentation](/simple-linear-regression.py)
