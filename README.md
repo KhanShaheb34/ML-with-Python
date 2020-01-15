@@ -29,4 +29,4 @@ According to **R Squared Theory** the accuracy of a best fite line is:
 
 ![R-squared Theory](/Images/r-squared.png)
 
-#### [Implimentation](/simple-linear-regression/simple_linear_regression.py)
+#### [Implimentation](/simple_linear_regression/simple_linear_regression.py)
