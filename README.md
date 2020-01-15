@@ -1,7 +1,7 @@
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/KhanShaheb34/ML-with-Python) 
 
 # ML-with-Python
-Learning python too
+Learning ML with Python from [sentdex's tutorial series](https://www.youtube.com/playlist?list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v)
 
 ## Simple Linear Regression
 In linear regression we have some x values and some y values, and the problem is to find the best fit line for the graph of x and y.
