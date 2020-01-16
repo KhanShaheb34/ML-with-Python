@@ -39,3 +39,5 @@ Ususally the distance is calculated by the distance of the two different point i
 According to the Eucledian Algorithm, the distance between two point in a graph is:
 
 ![Euclidean Distance](/Images/euclid_dist.png)
+
+> It is same as the Euclidian Distance algorithm we read in school and collage where ![Two Dimensional Euclidean Distance](/Images/euclid_dist_simp.gif). Just it is expressed in a well mannner! 😛
