@@ -30,3 +30,12 @@ According to **R Squared Theory** the accuracy of a best fite line is:
 ![R-squared Theory](/Images/r-squared.png)
 
 #### [Implimentation](/simple_linear_regression/simple_linear_regression.py)
+
+## K Nearest Neighbors (KNN)
+When a dataset is classified in some groups in a graph, the K Nearest Neighbors or KNN is used to determine the class of a new point in the graph. It determines the class by finding out the nearest K points in the graph, and calculating which class appears most of the times in those K points.
+
+Ususally the distance is calculated by the distance of the two different point in a graph. As example Eucledian Algorithm.
+
+According to the Eucledian Algorithm, the distance between two point in a graph is:
+
+![Euclidean Distance](/Images/euclid_dist.png)
