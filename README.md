@@ -44,3 +44,8 @@ According to the Eucledian Algorithm, the distance between two point in a graph 
 
 #### [Implimentation from scratch](/k_nearest_neighbors/K_Nearest_Neighbors.ipynb)
 #### [Example with Scikit Learn](/using_sklearn/k_nearest_neighbors/K_Nearest_Neighbors.ipynb)
+
+## Support Vector Machine (SVM)
+The objective of SVM is to find the best splitting boundary in data. It is also used to classify data.
+
+#### [Example with Scikit Learn](/using_sklearn/support_vector_machine/Support_Vector_Machine.ipynb)
