@@ -1,16 +1,9 @@
 import numpy as np 
+import pandas as pd 
 import warnings
-import matplotlib.pyplot as plt 
-from matplotlib import style
+import random
 from math import sqrt
 from collections import Counter
-
-# plot style
-style.use("fivethirtyeight")
-
-# dataset
-dataset = {'r': [[1, 3], [4, 2], [3, 3]], 'b': [[8, 6], [7, 5], [7, 6]]}
-new_feature = [4, 4]
 
 # calculating K Nearest Neighbors
 def k_nearest_neighbors(data, predict, k=3):
@@ -20,19 +13,49 @@ def k_nearest_neighbors(data, predict, k=3):
     distances = []
     for group in data:
         for features in data[group]:
-            # euclidean_distance = np.sqrt( np.sum( (np.array(features) - np.array(predict))**2 ) )
+            # this is a high level version of calculating the euclidean distance
             euclidean_distance = np.linalg.norm( np.array(features) - np.array(predict) )
             distances.append([euclidean_distance, group])
 
+    # finding the closest k points
     votes = [i[1] for i in sorted(distances)[:k]]
+    # finding the most common group in the closest k points
     vote_result = Counter(votes).most_common(1)[0][0]
-
     return vote_result
 
-group = k_nearest_neighbors(dataset, new_feature)
+# reading the dataset
+dataset = pd.read_csv('breast-cancer-wisconsin.data')
+# replacing the missing data
+dataset.replace('?', -99999, inplace=True)
+# dropping the id column
+dataset.drop(['id'], 1, inplace=True)
+# replacing the string data to float
+dataset = dataset.astype(float).values.tolist()
+# shuffling the dataset
+random.shuffle(dataset)
 
+# splitting the dataset for training and testing
+test_size = 0.2
+train_data = dataset[int(test_size*len(dataset)):]
+test_data = dataset[:int(test_size*len(dataset))]
 
-# plotting
-[ [ plt.scatter(ii[0], ii[1], s=100, c=i) for ii in dataset[i] ] for i in dataset ]
-plt.scatter(new_feature[0], new_feature[1], s=100, marker='x', c=group)
-plt.show()
+# grouping the data
+train_set = { 2:[], 4:[] }
+test_set = { 2:[], 4:[] }
+for data in train_data:
+    train_set[data[-1]].append(data[:-1])
+for data in test_data:
+    test_set[data[-1]].append(data[:-1])
+
+# testing with test data and calculating accuracy
+total = 0
+correct = 0
+for group in test_set:
+    for data in test_set[group]:
+        vote = k_nearest_neighbors(train_set, data)
+        if group == vote:
+            correct += 1
+        total += 1
+
+accuracy = correct/total
+print(accuracy)
