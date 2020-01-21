@@ -21,7 +21,9 @@ def k_nearest_neighbors(data, predict, k=3):
     votes = [i[1] for i in sorted(distances)[:k]]
     # finding the most common group in the closest k points
     vote_result = Counter(votes).most_common(1)[0][0]
-    return vote_result
+    # calculating the confidence of the result
+    confidence = Counter(votes).most_common(1)[0][1] / k
+    return vote_result, confidence
 
 # reading the dataset
 dataset = pd.read_csv('breast-cancer-wisconsin.data')
@@ -52,7 +54,7 @@ total = 0
 correct = 0
 for group in test_set:
     for data in test_set[group]:
-        vote = k_nearest_neighbors(train_set, data)
+        vote, confidence = k_nearest_neighbors(train_set, data, 5)
         if group == vote:
             correct += 1
         total += 1
