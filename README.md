@@ -3,7 +3,7 @@
 # ML-with-Python
 Learning ML with Python from [sentdex's tutorial series](https://www.youtube.com/playlist?list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v)
 
-## Simple Linear Regression
+## Simple Linear Regression (SLR)
 In linear regression we have some x values and some y values, and the problem is to find the best fit line for the graph of x and y.
 
 In simple word we have to find `y = mx + c` line. From an array of `Xs` and an array of `ys`. To find the line we have to find the slope `m` and the y-intercept `c`.
@@ -41,3 +41,5 @@ According to the Eucledian Algorithm, the distance between two point in a graph 
 ![Euclidean Distance](/Images/euclid_dist.png)
 
 > It is same as the Euclidian Distance algorithm we read in school and collage where ![Two Dimensional Euclidean Distance](/Images/euclid_dist_simp.gif). Just it is expressed in a well mannner! 😛
+
+[Example with Scikit Learn](/using_sklearn/k_nearest_neighbors/K_Nearest_Neighbors.ipynb)
