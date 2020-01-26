@@ -48,4 +48,7 @@ According to the Eucledian Algorithm, the distance between two point in a graph 
 ## Support Vector Machine (SVM)
 The objective of SVM is to find the best splitting boundary in data. It is also used to classify data.
 
+> Couldn't understand how the f\*ck this algorithm!
+
+#### [Implimentation from scratch](/Support_Vector_Machine/Support_Vector_Machine.ipynb)
 #### [Example with Scikit Learn](/using_sklearn/support_vector_machine/Support_Vector_Machine.ipynb)
