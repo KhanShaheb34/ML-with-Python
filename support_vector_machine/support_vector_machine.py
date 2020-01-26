@@ -97,17 +97,17 @@ class Support_Vector_Machine:
         # plotting positive support vector
         psv1 = hyperplane(hyp_x_min, self.w, self.b, 1)
         psv2 = hyperplane(hyp_x_max, self.w, self.b, 1)
-        self.ax.plot([hyp_x_min, hyp_x_max], [psv1, psv2])
+        self.ax.plot([hyp_x_min, hyp_x_max], [psv1, psv2], 'k')
 
         # plotting negative support vector
         nsv1 = hyperplane(hyp_x_min, self.w, self.b, -1)
         nsv2 = hyperplane(hyp_x_max, self.w, self.b, -1)
-        self.ax.plot([hyp_x_min, hyp_x_max], [nsv1, nsv2])
+        self.ax.plot([hyp_x_min, hyp_x_max], [nsv1, nsv2], 'k')
 
         # plotting positive support vector
         db1 = hyperplane(hyp_x_min, self.w, self.b, 0)
         db2 = hyperplane(hyp_x_max, self.w, self.b, 0)
-        self.ax.plot([hyp_x_min, hyp_x_max], [db1, db2])
+        self.ax.plot([hyp_x_min, hyp_x_max], [db1, db2], 'y--')
 
         plt.show()
 
@@ -119,5 +119,14 @@ data_dict = {
 
 # creating svm prototype
 SVM = Support_Vector_Machine()
+
+# training the classifier
 SVM.fit(data_dict)
+
+# predicting something
+predict_data = [[0,0], [10, 5], [6, 4], [9, 3], [2, 3], [5, 7], [0, 10], [2, 15]]
+for data in predict_data:
+    SVM.predict(data)
+
+# visualizing
 SVM.visualize()
