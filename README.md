@@ -50,5 +50,5 @@ The objective of SVM is to find the best splitting boundary in data. It is also 
 
 > Couldn't understand how the f\*ck this algorithm works!
 
-#### [Implimentation from scratch](/support_vector_machine/support_vector_machine.ipynb)
+#### [Implimentation from scratch](/support_vector_machine/support_vector_machine.py)
 #### [Example with Scikit Learn](/using_sklearn/support_vector_machine/Support_Vector_Machine.ipynb)
