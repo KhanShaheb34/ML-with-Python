@@ -52,3 +52,10 @@ The objective of SVM is to find the best splitting boundary in data. It is also 
 
 #### [Implimentation from scratch](/support_vector_machine/support_vector_machine.py)
 #### [Example with Scikit Learn](/using_sklearn/support_vector_machine/Support_Vector_Machine.ipynb)
+
+
+## K-Means CLustering
+K-means Clustering is a unsupervised learning algorithm which creates `k` clusters among the dataset.
+The center of cluster gets selected through iteration. 
+
+#### [Example with Scikit Learn](/KMeans_Clustering/kmeans_sklearn.py)
