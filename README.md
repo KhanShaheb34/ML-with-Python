@@ -57,11 +57,14 @@ The objective of SVM is to find the best splitting boundary in data. It is also 
 ## K-Means CLustering
 K-means Clustering is a unsupervised learning algorithm which creates `k` clusters among the dataset.
 The center of cluster gets selected through iteration. 
+
 First of all it selects `k` center points randomly then finds out the closest point from the center points. Then it finds out the mean distance of the closest points from each center and move the center to that mean. And do this reapitively untill the centers stop moving.
+
 Now the center points are the center of the clusters.
 
 #### [Example with Scikit Learn](/KMeans_Clustering/kmeans_sklearn.py)
 
 ## Mean-Shift Clustering
 Mean-shift algorithm is also an unsupervised clustering algorithm. As like [K-means Clustering](#K-Means-Clustering) it finds out the centers of the cluster but this time the number of centers aren't defined at first.
+
 This algorithm takes every point of the dataset as a center at first and for each point it finds other points in the radius of that point and then move the center to the mean of the points that appear in the radius. By doing this reapitedly the centers converges to some particular points. And that points are the centers of the clusters.
